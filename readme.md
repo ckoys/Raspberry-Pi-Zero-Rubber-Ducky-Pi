@@ -59,6 +59,9 @@ A .dd file is a standard .txt file with the extension chanaged. To clear up some
 ## Credits
 
 Authors:
+lucki1000
+
+I Forked from:
 Jeff L.
 Dee-oh-double-gee
 Theresalu
