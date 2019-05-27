@@ -13,7 +13,7 @@ BRANCH=next rpi-update c053625
 sed -i -e "\$adtoverlay=dwc2" /boot/config.txt
 
 ##Install git and download rspiducky
-wget --no-check-certificate https://raw.githubusercontent.com/ossiozac/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/LICENSE https://raw.githubusercontent.com/ossiozac/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/duckpi.sh https://github.com/ossiozac/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/raw/master/g_hid.ko https://github.com/ossiozac/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/raw/master/hid-gadget-test https://github.com/ossiozac/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/raw/master/hid-gadget-test.c https://github.com/ossiozac/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/raw/master/readme.md https://github.com/ossiozac/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/raw/master/usleep https://github.com/ossiozac/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/raw/master/usleep.c
+wget --no-check-certificate https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/LICENSE https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/duckpi.sh https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/g_hid.ko https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/hid-gadget-test https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/hid-gadget-test.c https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/readme.md https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/usleep https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/usleep.c https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/hid_usb
 
 ##Make all nessisary files executeable
 cd /home/pi
@@ -27,7 +27,9 @@ g_hid
 EOF
 
 ##Make it so that you can put the payload.dd in the /boot directory
+sudo cp /home/pi/hid_usb /usr/bin/hid_usb
 sudo chmod +x /usr/bin/hid_usb
+
 sed -i '/exit/d' /etc/rc.local
 
 cat <<'EOF'>>/etc/rc.local
