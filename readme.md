@@ -23,7 +23,7 @@ These instructions will help you setup and install your own Duckberry
 
 ### Installation
 
-1) Download the ISO for [Rasbian Lite 2016-02-29](http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2016-02-29/) Other versions may work but I have only tested with this.
+1) Download the latest ISO for [Rasbian Lite](https://www.raspberrypi.org/downloads/raspbian/).
 
 2) Burn the ISO to the Micro SD Card - if you can't do this, [Google can help!](https://www.google.co.uk/search?q=burn+raspbian+lite+to+sd+card)
 
