@@ -11,6 +11,8 @@ rpi-update
 
 ## dwc2 drivers
 sed -i -e "\$adtoverlay=dwc2" /boot/config.txt
+echo "dwc2" | sudo tee -a /etc/modules
+sudo echo "libcomposite" | sudo tee -a /etc/modules
 
 ##Install git and download rspiducky
 wget --no-check-certificate https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/LICENSE https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/duckpi.sh https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/g_hid.ko https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/hid-gadget-test https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/hid-gadget-test.c https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/hid_usb https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/readme.md https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/usleep https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/usleep.c
@@ -33,13 +35,13 @@ sudo chmod +x /usr/bin/hid_usb
 sed -i '/exit/d' /etc/rc.local
 
 cat <<'EOF'>>/etc/rc.local
+/usr/bin/hid_usb # libcomposite configuration
 sleep 3
 cat /boot/payload.dd > /home/pi/payload.dd
 sleep 1
 tr -d '\r' < /home/pi/payload.dd > /home/pi/payload2.dd
 sleep 1
 /home/pi/duckpi.sh /home/pi/payload2.dd
-/usr/bin/hid_usb # libcomposite configuration
 exit 0
 EOF
 
