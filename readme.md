@@ -29,7 +29,7 @@ These instructions will help you setup and install your own Duckberry
 
 3) Version 1 includes a setup script that automates the setting up from version 0.5. Download this using wget.
     ``` bash
-    wget https://github.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/blob/master/duckysetup.sh
+    wget https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/duckysetup.sh
     ```
 
 4) Make the script executable
