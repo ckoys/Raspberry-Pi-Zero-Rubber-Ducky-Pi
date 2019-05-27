@@ -7,7 +7,7 @@ fi
 apt update
 apt upgrade -y
 apt install rpi-update
-BRANCH=next rpi-update c053625
+rpi-update
 
 ## dwc2 drivers
 sed -i -e "\$adtoverlay=dwc2" /boot/config.txt
