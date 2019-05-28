@@ -1,8 +1,7 @@
 # Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi
 
 Version 1.1
-
-A £10 Rubber Ducky USB HID!
+Rubber Ducky USB HID!
 
 ## Introduction
 ```
