@@ -26,7 +26,7 @@ These instructions will help you setup and install your own RubberDucky
 
 2) Burn the ISO to the Micro SD Card - if you can't do this, [Google can help!](https://www.google.co.uk/search?q=burn+raspbian+lite+to+sd+card)
 
-3) Version 1 includes a setup script that automates the setting up from version 0.5. Download this using wget.
+3) Version alpha0:
     ``` bash
     wget https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/duckysetup.sh
     ```
