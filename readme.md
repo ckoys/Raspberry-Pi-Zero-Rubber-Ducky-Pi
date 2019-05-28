@@ -1,4 +1,4 @@
-# Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi
+# Raspberry-Pi-Zero-Rubber-Ducky-Pi
 
 Version 1.1
 Rubber Ducky USB HID!
@@ -51,9 +51,9 @@ These instructions will help you setup and install your own RubberDucky
 
 ## Duckyscript
 
-There are lots of [ready made ducky scripts here](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads) and you can make your own with [this generator](https://ducktoolkit.com/). Just make sure you use uncompiled Ducky Script .dd extension not .bin.
+There are lots of [ready made ducky scripts here](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads) and you can make your own with your brain or an generator.
 
-A .dd file is a standard .txt file with the extension chanaged. To clear up some confusion, the DuckToolKit will give you an option to download a compiled inject.bin file or a duckycode.txt file. You need to download the duckycode.txt file and change the name/extension to payload.dd and then put it in the /boot part of the SD card so that the Pi can load and run the script.
+The .dd file is a standard .txt file who is only the extension changed. To clear up some confusion, the DuckToolKit will give you an option to download a compiled inject.bin file or a duckycode.txt file. You need to download the duckycode.txt file and change the name/extension to payload.dd and then put it in the /boot part of the SD card so that the Pi can load and run the script.
 
 ## Credits
 
