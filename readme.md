@@ -7,19 +7,19 @@ A £10 Rubber Ducky USB HID!
 ## Introduction
 ```
    _      _      _         USB         _      _      _
-   __(.)< __(.)> __(.)=   Duck-    >(.)__ <(.)__ =(.)__
-   \___)  \___)  \___)    Berry!    (___/  (___/  (___/ 
+   __(.)< __(.)> __(.)=   Rubber-  >(.)__ <(.)__ =(.)__
+   \___)  \___)  \___)    Ducky!    (___/  (___/  (___/ 
 ```
 
 The USB Rubber Ducky is a Human Interface Device programmable with a simple scripting language allowing penetration testers to quickly and easily craft and deploy security auditing payloads that mimic human keyboard input. Tools and payloads can be found at usbrubberducky.com. Quack!
 
-DuckBerry Pi is a Raspberry Pi distro. based on Minibian which allows the Raspberry Pi Zero to behave similar to a [USB Rubber Ducky](https://hakshop.com/products/usb-rubber-ducky-deluxe): a small device USB device which emulates a keyboard and automates key entry.
+RubberDucky Pi is a Raspberry Pi distro. based on Minibian which allows the Raspberry Pi Zero to behave similar to a [USB Rubber Ducky](https://hakshop.com/products/usb-rubber-ducky-deluxe): a small device USB device which emulates a keyboard and automates key entry.
 Ducky scripts (uncompiled) which are made for the USB Rubber Ducky can be used with the Duckyberry Pi without modification. This can be useful for automating computer tasks, penetration testing machines, playing pranks, or just fun (by default plugging in an untouched Duckberry Pi image will open a Youtube video).
 Since it is recognised as a standard keyboard, this tool is compatible with Windows, Mac OS, Linux, Android, PlayStation 4, and anything that supports a USB keyboard.
 
 ## Getting Started
 
-These instructions will help you setup and install your own Duckberry
+These instructions will help you setup and install your own RubberDucky
 
 ### Installation
 
@@ -42,7 +42,7 @@ These instructions will help you setup and install your own Duckberry
        sudo ./duckysetup.sh
    ```
    
-### Using Duckberry
+### Using RubberDucky
    
 6) Turn off the PI, plug it into the target host machine via USB cable in the peripheral micro USB port, NOT THE POWER PORT.  A power cord is not required as the Pi Zero will take power directly from the host machine.
     
@@ -60,13 +60,7 @@ A .dd file is a standard .txt file with the extension chanaged. To clear up some
 
 Authors:
 lucki1000
-
-I Forked from:
-Jeff L.
-Dee-oh-double-gee
-Theresalu
-Ossiozac
-       
+      
 Credits to Original Authors:
 DroidDucky by Andrej Budincevic (https://github.com/anbud/DroidDucky)
 hardpass by girst (https://github.com/girst/hardpass)
