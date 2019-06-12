@@ -21,7 +21,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/lucki1000/Raspberr
 cd /home/pi
 chmod 755 hid-gadget-test.c duckpi.sh usleep.c g_hid.ko usleep hid-gadget-test
 
-\cp g_hid.ko /lib/modules/4.??.??+/kernel/drivers/usb/gadget/legacy
+\cp -r g_hid.ko /lib/modules/4.??.??+/kernel/drivers/usb/gadget/legacy
 
 cat <<'EOF'>>/etc/modules
 dwc2
@@ -29,7 +29,7 @@ g_hid
 EOF
 
 ##Make it so that you can put the payload.dd in the /boot directory
-sudo cp /home/pi/hid_usb /usr/bin/hid_usb
+sudo cp -r /home/pi/hid_usb /usr/bin/hid_usb
 sudo chmod +x /usr/bin/hid_usb
 
 sed -i '/exit/d' /etc/rc.local
