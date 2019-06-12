@@ -5,7 +5,7 @@ Rubber Ducky USB HID!
 
 ## Introduction
 ```
-   _      _      _         USB         _      _      _
+      _      _      _      USB       _      _      _
    __(.)< __(.)> __(.)=   Rubber-  >(.)__ <(.)__ =(.)__
    \___)  \___)  \___)    Ducky!    (___/  (___/  (___/ 
 ```
