@@ -30,17 +30,18 @@ These instructions will help you setup and install your own RubberDucky
     ``` bash
     wget https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/duckysetup.sh
     ```
-
+   or oneliners:
+    ``` bash
+    wget https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/duckysetup.sh && chmod +x duckysetup.sh && sudo ./duckysetup.sh
 4) Make the script executable
     ``` bash
-        chmod +x duckysetup.sh
+    chmod +x duckysetup.sh
     ```
    
 5) Run the script
-   ``` bash
-       sudo ./duckysetup.sh
-   ```
-   
+    ``` bash
+    sudo ./duckysetup.sh
+    ```
 ### Using RubberDucky
    
 6) Turn off the PI, plug it into the target host machine via USB cable in the peripheral micro USB port, NOT THE POWER PORT.  A power cord is not required as the Pi Zero will take power directly from the host machine.
