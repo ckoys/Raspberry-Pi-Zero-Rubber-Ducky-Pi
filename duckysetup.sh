@@ -21,7 +21,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/lucki1000/Raspberr
 cd /home/pi
 chmod 755 hid-gadget-test.c duckpi.sh usleep.c g_hid.ko usleep hid-gadget-test
 
-\cp -r g_hid.ko /lib/modules/4.??.??+/kernel/drivers/usb/gadget/legacy
+\cp g_hid.ko /lib/modules/4.??.??+/kernel/drivers/usb/gadget/legacy
 
 cat <<'EOF'>>/etc/modules
 dwc2
