@@ -65,6 +65,13 @@ Credits to Original Authors:
 DroidDucky by Andrej Budincevic (https://github.com/anbud/DroidDucky)
 hardpass by girst (https://github.com/girst/hardpass)
 
+## Summary
+
+Follow step 1 -5.
+Then edit /boot/payload.dd with your script.
+Then reboot/shutdown your Zero and plug it into your target with the otg port. (Not the power port on the Pi)
+Then wait
+
 ## MIT License
 
 Copyright (c) [2018] [Zac Henry Orehawa]
