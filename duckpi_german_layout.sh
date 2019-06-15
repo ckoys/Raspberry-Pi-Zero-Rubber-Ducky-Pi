@@ -19,9 +19,18 @@ function convert()
 	elif [ "$1" == "." ]
 	then
 		kbcode='period'
+	elif [ "$1" == "§" ]
+	then
+		kbcode='left-shift 3'
+	elif [ "$1" == "ß" ]
+	then
+		kbcode='minus'
 	elif [ "$1" == "\`" ]
 	then
-		kbcode='left-shift intlyen'
+		kbcode='left-shift equal'
+	elif [ "$1" == "\´" ]
+	then
+		kbcode='equal'
 	elif [ "$1" == "~" ]
 	then
 		kbcode='right-alt rbracket'
@@ -33,10 +42,10 @@ function convert()
 		kbcode='left-shift 0'
 	elif [ "$1" == "_" ]
 	then
-		kbcode='left-shift intlro'
+		kbcode='left-shift slash'
 	elif [ "$1" == "-" ]
 	then
-		kbcode='intlro'
+		kbcode='slash'
 	elif [ "$1" == "\"" ]
 	then
 		kbcode='left-shift 2'
@@ -60,10 +69,10 @@ function convert()
 		kbcode='left-shift intlbackslash'
 	elif [ "$1" == "?" ]
 	then
-		kbcode='left-shift eqal'
+		kbcode='left-shift minus'
 	elif [ "$1" == "\\" ]
 	then
-		kbcode='right-alt equal'
+		kbcode='right-alt minus'
 	elif [ "$1" == "|" ]
 	then
 		kbcode='right-alt intlbackslash'
@@ -102,7 +111,10 @@ function convert()
 		kbcode='left-shift 5'
 	elif [ "$1" == "^" ]
 	then
-		kbcode='backquote'
+		kbcode='bquote'
+	elif [ "$1" == "°" ]
+	then
+		kbcode='left-shift bquote'
 	elif [ "$1" == "&" ]
 	then
 		kbcode='left-shift 6'
