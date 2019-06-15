@@ -73,7 +73,9 @@ Then edit /boot/payload.dd with your script.
 
 Then reboot/shutdown your Zero and plug it into your target with the otg port. (Not the power port on the Pi)
 
-Then wait
+Then wait.
+
+Good Luck :)
 
 
 ## MIT License
