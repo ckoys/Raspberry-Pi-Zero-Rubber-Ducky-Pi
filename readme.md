@@ -1,14 +1,17 @@
 # Raspberry-Pi-Zero-Rubber-Ducky-Pi
 
+Version alpha0
+Rubber Ducky USB HID!
+
+
+# Info:
+
 German Keyboard try supports actually all the key in the Result:
 
 expected: !"§$%&/()=?#@ _ . , ; : \ ` ´ ß { [ ] } + * ~ ' - < > | ^ °
 
 result  : !"§$%&/()=?#@ _ . , ; : \ ` ß { [ ] } + * ~ ' - # '   
 
-
-Version alpha0
-Rubber Ducky USB HID!
 
 ## Introduction
 ```
