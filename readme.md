@@ -8,9 +8,9 @@ Rubber Ducky USB HID!
 
 ## German Keyboard try supports actually all the key in the Result:
 
-### expected:``` !"§$%&/()=?#@ _ . , ; : \ ` ´ ß { [ ] } + * ~ ' - < > | ^ ° ```
+```expected: !"§$%&/()=?#@ _ . , ; : \ ` ´ ß { [ ] } + * ~ ' - < > | ^ ° ```
 
-### result  :``` !"§$%&/()=?#@ _ . , ; : \ ` ß { [ ] } + * ~ ' - # '   ```
+```result  : !"§$%&/()=?#@ _ . , ; : \ ` ß { [ ] } + * ~ ' - # '   ```
 
 
 ## Introduction
