@@ -34,7 +34,7 @@ These instructions will help you setup and install your own RubberDucky
 
 1) Download the latest ISO for [Rasbian Lite](https://www.raspberrypi.org/downloads/raspbian/).
 
-2) Burn the ISO to the Micro SD Card - if you can't do this, [Google can help!](https://www.google.co.uk/search?q=burn+raspbian+lite+to+sd+card)
+2) Burn the ISO to the Micro SD Card - if you can't do this, [Google can help!](https://www.google.com/search?q=burn+raspbian+lite+to+sd+card)
 
 3) Version alpha0:
     ``` bash
