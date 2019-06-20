@@ -57,13 +57,13 @@ function convert()
 		kbcode='left-shift period'
 	elif [ "$1" == ";" ]
 	then
-		kbcode='left-shift comma'
+		kbcode='f12'
 	elif [ "$1" == "<" ]
 	then
 		kbcode='intlbackslash'
 	elif [ "$1" == "," ]
 	then
-		kbcode='comma'
+		kbcode='left-shift f12'
 	elif [ "$1" == ">" ]
 	then
 		kbcode='left-shift intlbackslash'
@@ -72,7 +72,7 @@ function convert()
 		kbcode='left-shift minus'
 	elif [ "$1" == "\\" ]
 	then
-		kbcode='right-alt minus'
+		kbcode='right-alt f12'
 	elif [ "$1" == "|" ]
 	then
 		kbcode='right-alt intlbackslash'
