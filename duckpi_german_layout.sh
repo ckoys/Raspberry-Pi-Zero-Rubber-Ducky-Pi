@@ -60,13 +60,13 @@ function convert()
 		kbcode='left-shift comma'
 	elif [ "$1" == "<" ]
 	then
-		kbcode='f12'
+		kbcode=''
 	elif [ "$1" == "," ]
 	then
 		kbcode='comma'
 	elif [ "$1" == ">" ]
 	then
-		kbcode='left-shift f12'
+		kbcode=''
 	elif [ "$1" == "?" ]
 	then
 		kbcode='left-shift minus'
@@ -75,7 +75,7 @@ function convert()
 		kbcode='right-alt minus'
 	elif [ "$1" == "|" ]
 	then
-		kbcode='right-alt f12'
+		kbcode=''
 	elif [ "$1" == "/" ]
 	then
 		kbcode='left-shift 7'
