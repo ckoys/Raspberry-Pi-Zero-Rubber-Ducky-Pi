@@ -4,6 +4,8 @@ if [ $EUID -ne 0 ]; then
 	echo "sudo $0 $@"
 	exit
 fi
+read -p "Enter Keyboard layout supported layouts: `echo $'\n de \n us \n '`" layout
+
 apt update
 apt upgrade -y
 apt install rpi-update
@@ -32,18 +34,38 @@ EOF
 sudo cp -r /home/pi/hid_usb /usr/bin/hid_usb
 sudo chmod +x /usr/bin/hid_usb
 
-sed -i '/exit/d' /etc/rc.local
+if [ $layout == "us" ] 
+then
+	sed -i '/exit/d' /etc/rc.local
+	cat <<'EOF'>>/etc/rc.local
+	/usr/bin/hid_usb # libcomposite configuration
+	sleep 3
+	cat /boot/payload.dd > /home/pi/payload.dd
+	sleep 1
+	tr -d '\r' < /home/pi/payload.dd > /home/pi/payload2.dd
+	sleep 1
+	/home/pi/duckpi.sh /home/pi/payload2.dd
+	exit 0
+	EOF
+	gcc /home/pi/hid-gadget-test.c -o /home/pi/hid-gadget-test
+fi
 
-cat <<'EOF'>>/etc/rc.local
-/usr/bin/hid_usb # libcomposite configuration
-sleep 3
-cat /boot/payload.dd > /home/pi/payload.dd
-sleep 1
-tr -d '\r' < /home/pi/payload.dd > /home/pi/payload2.dd
-sleep 1
-/home/pi/duckpi.sh /home/pi/payload2.dd
-exit 0
-EOF
+if [ $layout == "de"]
+then
+	sed -i '/exit/d' /etc/rc.local
+	cat <<'EOF'>>/etc/rc.local
+	/usr/bin/hid_usb # libcomposite configuration
+	sleep 3
+	cat /boot/payload.dd > /home/pi/payload.dd
+	sleep 1
+	tr -d '\r' < /home/pi/payload.dd > /home/pi/payload2.dd
+	sleep 1
+	/home/pi/duckpi_german_layout.sh /home/pi/payload2.dd
+	exit 0
+	EOF
+	gcc /home/pi/hid-gadget-test_german.c -o /home/pi/hid-gadget-test
+fi
+
 
 ##Making the first payload
 cat <<'EOF'>>/boot/payload.dd
