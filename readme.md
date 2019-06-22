@@ -6,7 +6,7 @@ Rubber Ducky USB HID!
 
 # Info:
 
-## German Keyboard try supports actually all the key in the Result:
+## German Keyboard supports actually all the key in the Result:
 <pre>
 expected: !"§$%&/()=?#@ _ . , ; : \ ` ß { [ ] } + * ~ ' - < > | ^ ° 
 result  : !"§$%&/()=?#@ _ . , ; : \ ` ß { [ ] } + * ~ ' - < > | ^ °
