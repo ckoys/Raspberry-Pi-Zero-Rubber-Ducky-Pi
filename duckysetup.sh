@@ -31,7 +31,7 @@ then
 	sleep 1
 	/home/pi/duckpi.sh /home/pi/payload2.dd
 	exit 0
-	\EOF
+EOF
 	gcc /home/pi/hid-gadget-test.c -o /home/pi/hid-gadget-test
 fi
 
@@ -47,7 +47,7 @@ then
 	sleep 1
 	/home/pi/duckpi_german_layout.sh /home/pi/payload2.dd
 	exit 0
-	\EOF
+EOF
 	gcc /home/pi/hid-gadget-test_german.c -o /home/pi/hid-gadget-test
 fi
 
