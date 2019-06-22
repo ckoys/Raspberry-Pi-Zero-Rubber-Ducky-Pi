@@ -12,6 +12,7 @@ expected: !"§$%&/()=?#@ _ . , ; : \ ` ß { [ ] } + * ~ ' - < > | ^ °
 result  : !"§$%&/()=?#@ _ . , ; : \ ` ß { [ ] } + * ~ ' - < > | ^ °
   
 </pre>
+Thanks to [@Ephemeral](https://electronics.stackexchange.com/users/135565/ephemeral)
 
 ## Introduction
 ```
