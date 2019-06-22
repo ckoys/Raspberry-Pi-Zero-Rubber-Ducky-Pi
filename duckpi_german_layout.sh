@@ -111,10 +111,10 @@ function convert()
 		kbcode='left-shift 5'
 	elif [ "$1" == "^" ]
 	then
-		kbcode='bquote'
+		kbcode='^'
 	elif [ "$1" == "°" ]
 	then
-		kbcode='left-shift bquote'
+		kbcode='left-shift ^'
 	elif [ "$1" == "&" ]
 	then
 		kbcode='left-shift 6'
