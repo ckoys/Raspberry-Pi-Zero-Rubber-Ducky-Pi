@@ -509,4 +509,4 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 		echo "($line_num) Parse error: Unexpected $cmd."
 	fi
 	/home/pi/usleep $defdelay
-done < "$1"
+done < "$2"
