@@ -170,15 +170,6 @@ function convert() {
 	echo "$kbcode"
 }
 
-convert "m"
-convert "y"
-convert "@"
-convert "e"
-convert "m"
-convert "a"
-convert "i"
-convert "l"
-
 while IFS='' read -r line || [[ -n "$line" ]]; do
 	((line_num++))
 	read -r cmd info <<<"$line"
