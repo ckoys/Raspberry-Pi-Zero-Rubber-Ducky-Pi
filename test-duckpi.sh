@@ -10,7 +10,7 @@ function convert()
 {
 	local kbcode=""
 
-	if [[ $1 = "us"]]
+	if [ $1 = "us"]
 	then
 		if [ "$1" == " " ]
 		then
@@ -113,7 +113,7 @@ function convert()
 			kbcode='kp-multiply'
 	fi
 
-	if [[ $1 = "de" ]]
+	if [ $1 = "de" ]
 	then	
 		if [ "$2" == " " ]
 		then
