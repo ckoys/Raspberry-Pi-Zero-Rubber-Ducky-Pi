@@ -9,7 +9,7 @@ LANGUAGE=$1
 
 function convert() 
 {
-	local kbcode=""
+        local kbcode=""
 
 	if [ $LANGUAGE == "us" ]
 	then
