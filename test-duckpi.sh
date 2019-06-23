@@ -11,7 +11,7 @@ function convert()
 {
 	local kbcode=""
 
-	if [ $LANGUAGE = "us" ]
+	if [ $LANGUAGE == "us" ]
 	then
 		if [ "$1" == " " ]
 		then
@@ -128,7 +128,7 @@ function convert()
 		echo "$kbcode"
 	fi
 
-	if [ $LANGUAGE = "de" ]
+	if [ $LANGUAGE == "de" ]
 	then	
 		if [ "$1" == " " ]
 		then
