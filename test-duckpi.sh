@@ -5,12 +5,13 @@ kb="/dev/hidg0 keyboard"
 last_cmd=""
 last_string=""
 line_num=0
+LANGUAGE=$1
 
 function convert() 
 {
 	local kbcode=""
 
-	if [ $1 = "us"]
+	if [ $LANGUAGE = "us" ]
 	then
 		if [ "$1" == " " ]
 		then
@@ -111,136 +112,151 @@ function convert()
 		elif [ "$1" == "*" ]
 		then
 			kbcode='kp-multiply'
+	
+		else
+			case $1 in
+			[[:upper:]])
+				tmp=$1
+				kbcode="left-shift ${tmp,,}"
+				;;
+			*)
+				kbcode="$1"
+				;;
+			esac
+		fi
+
+		echo "$kbcode"
 	fi
 
-	if [ $1 = "de" ]
+	if [ $LANGUAGE = "de" ]
 	then	
-		if [ "$2" == " " ]
+		if [ "$1" == " " ]
 		then
 			kbcode='space'
-		elif [ "$2" == "!" ]
+		elif [ "$1" == "!" ]
 		then
 			kbcode='left-shift 1'
-		elif [ "$2" == "." ]
+		elif [ "$1" == "." ]
 		then
 			kbcode='period'
-		elif [ "$2" == "§" ]
+		elif [ "$1" == "§" ]
 		then
 			kbcode='left-shift 3'
-		elif [ "$2" == "ß" ]
+		elif [ "$1" == "ß" ]
 		then
 			kbcode='minus'
-		elif [ "$2" == "\`" ]
+		elif [ "$1" == "\`" ]
 		then
 			kbcode='left-shift equal'
-		elif [ "$2" == "\´" ]
+		elif [ "$1" == "\´" ]
 		then
 			kbcode='equal'
-		elif [ "$2" == "~" ]
+		elif [ "$1" == "~" ]
 		then
 			kbcode='right-alt rbracket'
-		elif [ "$2" == "+" ]
+		elif [ "$1" == "+" ]
 		then
 			kbcode='rbracket'
-		elif [ "$2" == "=" ]
+		elif [ "$1" == "=" ]
 		then
 			kbcode='left-shift 0'
-		elif [ "$2" == "_" ]
+		elif [ "$1" == "_" ]
 		then
 			kbcode='left-shift slash'
-		elif [ "$2" == "-" ]
+		elif [ "$1" == "-" ]
 		then
 			kbcode='slash'
-		elif [ "$2" == "\"" ]
+		elif [ "$1" == "\"" ]
 		then
 			kbcode='left-shift 2'
-		elif [ "$2" == "'" ]
+		elif [ "$1" == "'" ]
 		then
 			kbcode='left-shift backslash'
-		elif [ "$2" == ":" ]
+		elif [ "$1" == ":" ]
 		then
 			kbcode='left-shift period'
-		elif [ "$2" == ";" ]
+		elif [ "$1" == ";" ]
 		then
 			kbcode='left-shift comma'
-		elif [ "$2" == "<" ]
+		elif [ "$1" == "<" ]
 		then
 			kbcode='non-us-100'
-		elif [ "$2" == "," ]
+		elif [ "$1" == "," ]
 		then
 			kbcode='comma'
-		elif [ "$2" == ">" ]
+		elif [ "$1" == ">" ]
 		then
 			kbcode='left-shift non-us-100'
-		elif [ "$2" == "?" ]
+		elif [ "$1" == "?" ]
 		then
 			kbcode='left-shift minus'
-		elif [ "$2" == "\\" ]
+		elif [ "$1" == "\\" ]
 		then
 			kbcode='right-alt minus'
-		elif [ "$2" == "|" ]
+		elif [ "$1" == "|" ]
 		then
 			kbcode='right-alt non-us-100'
-		elif [ "$2" == "/" ]
+		elif [ "$1" == "/" ]
 		then
 			kbcode='left-shift 7'
-		elif [ "$2" == "{" ]
+		elif [ "$1" == "{" ]
 		then
 			kbcode='right-alt 7'
-		elif [ "$2" == "}" ]
+		elif [ "$1" == "}" ]
 		then
 			kbcode='right-alt 0'
-		elif [ "$2" == "(" ]
+		elif [ "$1" == "(" ]
 		then
 			kbcode='left-shift 8'
-		elif [ "$2" == ")" ]
+		elif [ "$1" == ")" ]
 		then
 			kbcode='left-shift 9'
-		elif [ "$2" == "[" ]
+		elif [ "$1" == "[" ]
 		then
 			kbcode='right-alt 8'
-		elif [ "$2" == "]" ]
+		elif [ "$1" == "]" ]
 		then
 			kbcode='right-alt 9'
-		elif [ "$2" == "#" ]
+		elif [ "$1" == "#" ]
 		then
 			kbcode='backslash'
-		elif [ "$2" == "@" ]
+		elif [ "$1" == "@" ]
 		then
 			kbcode='right-alt q'
-		elif [ "$2" == "$" ]
+		elif [ "$1" == "$" ]
 		then
 			kbcode='left-shift 4'
-		elif [ "$2" == "%" ]
+		elif [ "$1" == "%" ]
 		then
 			kbcode='left-shift 5'
-		elif [ "$2" == "^" ]
+		elif [ "$1" == "^" ]
 		then
 			kbcode='^'
-		elif [ "$2" == "°" ]
+		elif [ "$1" == "°" ]
 		then
 			kbcode='left-shift ^'
-		elif [ "$2" == "&" ]
+		elif [ "$1" == "&" ]
 		then
 			kbcode='left-shift 6'
-		elif [ "$2" == "*" ]
+		elif [ "$1" == "*" ]
 		then
 			kbcode='left-shift rbracket'
-	fi
-
-	else
-		case $1 in
-		[[:upper:]])
-			tmp=$1
-			kbcode="left-shift ${tmp,,}"
-			;;
-		*)
-			kbcode="$1"
-			;;
-		esac
-	fi
+	
+		else
+			case $1 in
+			[[:upper:]])
+				tmp=$1
+				kbcode="left-shift ${tmp,,}"
+				;;
+			*)
+				kbcode="$1"
+				;;
+			esac
+		fi
 
 	echo "$kbcode"
+	fi
+
 }
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
