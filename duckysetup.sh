@@ -24,7 +24,7 @@ then
 	gcc hid-gadget-test_german.c -o hid-gadget-test
 fi
 
-elif [[ $layout == "us" ]]
+if [[ $layout == "us" ]]
 then
 	gcc gcc hid-gadget-test.c -o gcc hid-gadget-test
 fi
