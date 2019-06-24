@@ -37,7 +37,7 @@ These instructions will help you setup and install your own RubberDucky
 
 2) Burn the ISO to the Micro SD Card - if you can't do this, [Google can help!](https://www.google.com/search?q=burn+raspbian+lite+to+sd+card)
 
-3) Version alpha0:
+3) Version 1.0:
     ``` bash
     wget https://raw.githubusercontent.com/lucki1000/Raspberry-Pi-Zero-Rubber-Ducky-Duckberry-Pi/master/duckysetup.sh
     ```
@@ -61,6 +61,31 @@ These instructions will help you setup and install your own RubberDucky
 
 8) Once the default script runs you can unplug and take the SD card out of the PI, plug it into any machine with a USB SD card adaptor and then change /boot/payload.dd file to any DuckyScript Payload. This is what file the Pi will inject into the target device.
 
+## Summary
+
+Follow step 1 -5.
+
+Then edit /boot/payload.dd with your script.
+
+Then reboot/shutdown your Zero and plug it into your target with the otg port. (Not the power port on the Pi)
+
+Then wait.
+
+If you wouldn't reboot every time you want to annoy anyone you can launch this:
+````
+/home/pi/duckpi.sh ${layout} payload_file
+````
+${layout} you must replace with your keyboard layout.
+
+Actually supported Keyboards:
+
+us      United States Keyboard layout
+
+de      German Keyboard layout
+
+Good Luck :)
+
+
 ## Duckyscript
 
 There are lots of [ready made ducky scripts here](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads) and you can make your own with your brain or an generator.
@@ -75,18 +100,6 @@ lucki1000
 Credits to Original Authors:
 DroidDucky by Andrej Budincevic (https://github.com/anbud/DroidDucky)
 hardpass by girst (https://github.com/girst/hardpass)
-
-## Summary
-
-Follow step 1 -5.
-
-Then edit /boot/payload.dd with your script.
-
-Then reboot/shutdown your Zero and plug it into your target with the otg port. (Not the power port on the Pi)
-
-Then wait.
-
-Good Luck :)
 
 
 ## MIT License
