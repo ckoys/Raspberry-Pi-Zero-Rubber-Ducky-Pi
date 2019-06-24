@@ -1,6 +1,6 @@
 # Raspberry-Pi-Zero-Rubber-Ducky-Pi
 
-Version alpha0
+Version 1.0
 Rubber Ducky USB HID!
 
 
