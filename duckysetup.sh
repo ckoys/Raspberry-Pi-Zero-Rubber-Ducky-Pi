@@ -46,7 +46,7 @@ sudo chmod +x /usr/bin/hid_usb
 
 sed -i '/exit/d' /etc/rc.local
 
-cat <<'EOF'>>/etc/rc.local
+cat <<EOF>>/etc/rc.local
 /usr/bin/hid_usb # libcomposite configuration
 sleep 3
 cat /boot/payload.dd > /home/pi/payload.dd
